@@ -17,7 +17,8 @@
     "build": "react-vessel build",
     "start": "react-vessel start",
     "test": "react-vessel test",
-    "analyze": "react-vessel analyze"
+    "analyze": "react-vessel analyze",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "engines": {
     "node": ">=8",
@@ -42,6 +43,7 @@
     "@types/react-dom": "^16.8.4",
     "@types/react-redux": "^7.1.0",
     "@types/react-router-dom": "^4.3.4",
+    "gh-pages": "^2.0.1",
     "jest": "^24.8.0",
     "jest-transform-stub": "latest",
     "prop-types": "^15.7.2",
