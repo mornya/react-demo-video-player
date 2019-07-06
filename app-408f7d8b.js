@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{25:function(n,o,e){e(26),n.exports=e(28)},28:function(n,o,e){"use strict";e.r(o),function(n){var o=e(22),t={application:{component:function(){return Promise.all([e.e(7),e.e(8)]).then(e.bind(null,45))},rootElementId:"app",onHotReload:function(o){return n.hot&&!1}},router:{isUseBrowserRouter:!0},serviceWorker:{isUse:!0}};o.Ignite.init(t)}.call(this,e(18)(n))}},[[25,2,0,5]]]);
+//# sourceMappingURL=app-408f7d8b.js.map
