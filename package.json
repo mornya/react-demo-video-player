@@ -26,6 +26,8 @@
     "clean": "react-vessel clean",
     "build": "react-vessel build",
     "start": "react-vessel start",
+    "serve": "react-vessel start",
+    "dev": "react-vessel dev",
     "test": "react-vessel test",
     "test:watch": "react-vessel test watch",
     "analyze": "react-vessel analyze",
