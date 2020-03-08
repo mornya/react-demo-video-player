@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { Link /* Route, Redirect, Switch */ } from 'react-router-dom'
-import { YouTube, Vimeo } from '@mornya/react-player-libs'
-import './App.scss'
+import React from 'react';
+import { Link /* Route, Redirect, Switch */ } from 'react-router-dom';
+import { YouTube, Vimeo } from '@mornya/react-player-libs';
+import './App.scss';
 
 /**
  * This is an app of entries.
@@ -27,7 +27,7 @@ export default function App () {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li>
-            <a href="https://www.npmjs.com/package/@mornya/react-vessel" target="_blank" rel="noopener">React Vessel</a>
+            <a href="https://www.npmjs.com/package/@mornya/react-vessel" target="_blank" rel="noopener noreferrer">React Vessel</a>
           </li>
           <li>
             <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React.js</a>
@@ -44,7 +44,7 @@ export default function App () {
         <table>
           <tbody>
             <tr>
-              <th colSpan="2">YouTube</th>
+              <th colSpan={2}>YouTube</th>
             </tr>
             <tr>
               <td>
@@ -70,7 +70,7 @@ export default function App () {
               </td>
             </tr>
             <tr>
-              <th colSpan="2">Vimeo</th>
+              <th colSpan={2}>Vimeo</th>
             </tr>
             <tr>
               <td>
@@ -79,8 +79,8 @@ export default function App () {
                   autoplay
                   controls
                   onReady={origin => origin.getVideoTitle()
-                    .then(title => console.log('[VIMEO] READY:', title))
-                    .catch(err => console.error(err))
+                    .then((title: string) => console.log('[VIMEO] READY:', title))
+                    .catch((error: Error) => console.error(error))
                   }
                   onStateChange={(status, origin) => console.log('[VIMEO] STATE CHANGED:', status, origin)}
                   onFinish={() => console.log('[VIMEO] FINISH TO PLAY')}
@@ -91,8 +91,8 @@ export default function App () {
                 <Vimeo
                   videoId="191947042"
                   onReady={origin => origin.getVideoTitle()
-                    .then(title => console.log('[VIMEO] READY:', title))
-                    .catch(err => console.error(err))
+                    .then((title: string) => console.log('[VIMEO] READY:', title))
+                    .catch((error: Error) => console.error(error))
                   }
                   onStateChange={(status, origin) => console.log('[VIMEO] STATE CHANGED:', status, origin)}
                   onFinish={() => console.log('[VIMEO] FINISH TO PLAY')}
@@ -107,8 +107,8 @@ export default function App () {
       </header>
 
       <footer>
-        Copyright 2019 by mornya. All rights reserved.
+        Copyright 2020. mornya. All rights reserved.
       </footer>
     </div>
-  )
+  );
 }

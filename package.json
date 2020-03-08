@@ -12,7 +12,7 @@
     "youtube",
     "vimeo"
   ],
-  "homepage": "",
+  "homepage": "https://mornya.github.io/react-demo-video-player",
   "license": "MIT",
   "author": "mornya <mornya78@gmail.com>",
   "private": true,
@@ -22,7 +22,7 @@
   "scripts": {
     "login": "react-vessel login",
     "lint": "react-vessel lint",
-    "lint:all": "react-vessel lint all",
+    "lint:fix": "react-vessel lint fix",
     "clean": "react-vessel clean",
     "build": "react-vessel build",
     "start": "react-vessel start",
@@ -30,39 +30,33 @@
     "dev": "react-vessel dev",
     "test": "react-vessel test",
     "test:watch": "react-vessel test watch",
+    "test:coverage": "react-vessel test coverage",
     "analyze": "react-vessel analyze",
-    "deploy": "npm run build && gh-pages -d dist"
+    "analyze:file": "react-vessel analyze file",
+    "deploy": "npm run build env:ghpages && echo 'Wait...' && gh-pages -d dist"
   },
   "engines": {
     "node": ">=10",
     "npm": ">=6"
   },
   "dependencies": {
-    "@mornya/react-helper": "^0.8.0",
-    "@mornya/react-player-libs": "latest",
-    "immer": "^5.2.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-redux": "^7.1.3",
+    "@mornya/react-helper": "^0.9.1",
+    "@mornya/react-player-libs": "^1.0.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.25",
-    "@types/node": "^13.1.6",
-    "@types/react": "^16.9.17",
-    "@types/react-dom": "^16.9.4",
-    "@types/react-redux": "^7.1.5",
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.0",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "@types/react-redux": "^7.1.7",
     "@types/react-router-dom": "^5.1.3",
-    "gh-pages": "^2.2.0",
-    "jest": "^24.9.0",
-    "jest-transform-stub": "latest",
-    "prop-types": "^15.7.2",
-    "ts-jest": "latest",
-    "tslint": "^5.20.1",
-    "tslint-react": "^4.1.0",
-    "typescript": "^3.7.4"
+    "typescript": "^3.8.3"
   },
   "browserslist": [
     ">0.2%",
@@ -82,31 +76,7 @@
       "xfwd": true
     }
   },
-  "eslintConfig": {
-    "root": false,
-    "env": {
-      "node": true
-    }
-  },
-  "jest": {
-    "transform": {
-      ".[t|j]sx?$": "ts-jest",
-      ".(bmp|gif|jpe?g|png|svg|tif|webp|s?css|eot|[t|o]tf|woff2?)$": "jest-transform-stub"
-    },
-    "testRegex": "\\.test\\.[t|j]sx?$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx"
-    ],
-    "globals": {
-      "ts-jest": {
-        "diagnostics": true
-      }
-    }
-  },
   "vessel": {
-    "minVersion": "3.0.0"
+    "minVersion": "3.3.0"
   }
 }
