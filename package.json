@@ -27,7 +27,7 @@
     "build": "react-vessel build",
     "start": "react-vessel start",
     "serve": "react-vessel start",
-    "dev": "react-vessel dev",
+    "dev": "react-vessel start",
     "test": "react-vessel test",
     "test:watch": "react-vessel test watch",
     "test:coverage": "react-vessel test coverage",
@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "@types/jest": "^25.1.4",
-    "@types/node": "^13.9.0",
+    "@types/node": "^13.9.1",
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
     "@types/react-redux": "^7.1.7",
@@ -77,6 +77,6 @@
     }
   },
   "vessel": {
-    "minVersion": "3.3.0"
+    "minVersion": "3.5.0"
   }
 }
