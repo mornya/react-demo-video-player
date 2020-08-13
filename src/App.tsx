@@ -52,20 +52,20 @@ export default function App () {
                   videoId="HcDkjQTlukM"
                   autoplay
                   controls
-                  onReady={origin => console.log('[YOUTUBE] READY:', origin.getVideoData())}
-                  onStateChange={(status, origin) => console.log('[YOUTUBE] STATE CHANGED:', status, origin)}
-                  onFinish={() => console.log('[YOUTUBE] FINISH TO PLAY')}
-                  onError={err => console.log('[YOUTUBE] ERROR', err)}
+                  onReady={data => console.log('[YouTube/1] READY:', data.getVideoData())}
+                  onStateChange={(status, data) => console.log('[YouTube/1] STATE CHANGED:', status, data)}
+                  onFinish={() => console.log('[YouTube/1] FINISHED')}
+                  onError={err => console.log('[YouTube/1] ERRORED', err)}
                 />
               </td>
               <td>
                 <YouTube
                   videoId="oTKTYWlYofs"
                   autoplay
-                  onReady={origin => console.log('[YOUTUBE] READY:', origin.getVideoData())}
-                  onStateChange={(status, origin) => console.log('[YOUTUBE] STATE CHANGED:', status, origin)}
-                  onFinish={() => console.log('[YOUTUBE] FINISH TO PLAY')}
-                  onError={err => console.log('[YOUTUBE] ERROR', err)}
+                  onReady={origin => console.log('[YouTube/2] READY:', origin.getVideoData())}
+                  onStateChange={(status, data) => console.log('[YouTube/2] STATE CHANGED:', status, data)}
+                  onFinish={() => console.log('[YouTube/2] FINISHED')}
+                  onError={err => console.log('[YouTube/2] ERRORED', err)}
                 />
               </td>
             </tr>
@@ -78,25 +78,19 @@ export default function App () {
                   videoId="151575579"
                   autoplay
                   controls
-                  onReady={origin => origin.getVideoTitle()
-                    .then((title: string) => console.log('[VIMEO] READY:', title))
-                    .catch((error: Error) => console.error(error))
-                  }
-                  onStateChange={(status, origin) => console.log('[VIMEO] STATE CHANGED:', status, origin)}
-                  onFinish={() => console.log('[VIMEO] FINISH TO PLAY')}
-                  onError={err => console.log('[VIMEO] ERROR', err)}
+                  onReady={(playbackInfo) => console.log('[Vimeo/1] READY:', playbackInfo)}
+                  onStateChange={(status, playbackInfo) => console.log('[Vimeo/1] STATE CHANGED:', status, playbackInfo)}
+                  onFinish={() => console.log('[Vimeo/1] FINISHED')}
+                  onError={err => console.log('[Vimeo/1] ERRORED', err)}
                 />
               </td>
               <td>
                 <Vimeo
                   videoId="191947042"
-                  onReady={origin => origin.getVideoTitle()
-                    .then((title: string) => console.log('[VIMEO] READY:', title))
-                    .catch((error: Error) => console.error(error))
-                  }
-                  onStateChange={(status, origin) => console.log('[VIMEO] STATE CHANGED:', status, origin)}
-                  onFinish={() => console.log('[VIMEO] FINISH TO PLAY')}
-                  onError={err => console.log('[VIMEO] ERROR', err)}
+                  onReady={(playbackInfo) => console.log('[Vimeo/2] READY:', playbackInfo)}
+                  onStateChange={(status, playbackInfo) => console.log('[Vimeo/2] STATE CHANGED:', status, playbackInfo)}
+                  onFinish={() => console.log('[Vimeo/2] FINISHED')}
+                  onError={err => console.log('[Vimeo/2] ERRORED', err)}
                 />
               </td>
             </tr>
