@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{21:function(e,n,o){o(22),e.exports=o(24)},24:function(e,n,o){"use strict";o.r(n),function(e){var n=o(17),r={application:{component:function(){return o.e(3).then(o.bind(null,42))},rootElementId:"app",onHotReload:function(n){return e.hot&&!1}},router:{isUseBrowserRouter:!0,basename:"/react-demo-video-player/"},serviceWorker:{isUse:!0,config:{url:"./",file:"service-worker.js"}}};n.Ignite.init(r)}.call(this,o(14)(e))}},[[21,1,2]]]);
-//# sourceMappingURL=app-84582326.js.map
