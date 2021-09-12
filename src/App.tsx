@@ -3,6 +3,8 @@ import { Link /* Route, Redirect, Switch */ } from 'react-router-dom';
 import { YouTube, Vimeo } from '@mornya/react-player-libs';
 import './App.scss';
 
+type Props = {};
+
 /**
  * This is an app of entries.
  *
@@ -19,7 +21,7 @@ import './App.scss';
  *   <Route path="/project/:no" component={Project} />
  * </div>
  */
-export default function App () {
+const App: React.FC<Props> = (_props: Props) => {
   return (
     <div className="app-wrapper">
       <nav>
@@ -49,21 +51,21 @@ export default function App () {
             <tr>
               <td>
                 <YouTube
-                  videoId="HcDkjQTlukM"
+                  videoId="N96dRJ7o8E0"
                   autoplay
                   controls
-                  onReady={data => console.log('[YouTube/1] READY:', data.getVideoData())}
-                  onStateChange={(status, data) => console.log('[YouTube/1] STATE CHANGED:', status, data)}
+                  onReady={player => console.log('[YouTube/1] READY:', player.getVideoData())}
+                  onStateChange={(status, player) => console.log('[YouTube/1] STATE CHANGED:', status, player)}
                   onFinish={() => console.log('[YouTube/1] FINISHED')}
                   onError={err => console.log('[YouTube/1] ERRORED', err)}
                 />
               </td>
               <td>
                 <YouTube
-                  videoId="oTKTYWlYofs"
+                  videoId="IU7mBz3Z8AY"
                   autoplay
-                  onReady={origin => console.log('[YouTube/2] READY:', origin.getVideoData())}
-                  onStateChange={(status, data) => console.log('[YouTube/2] STATE CHANGED:', status, data)}
+                  onReady={player => console.log('[YouTube/2] READY:', player.getVideoData())}
+                  onStateChange={(status, player) => console.log('[YouTube/2] STATE CHANGED:', status, player)}
                   onFinish={() => console.log('[YouTube/2] FINISHED')}
                   onError={err => console.log('[YouTube/2] ERRORED', err)}
                 />
@@ -75,20 +77,21 @@ export default function App () {
             <tr>
               <td>
                 <Vimeo
-                  videoId="151575579"
+                  videoId="211656397"
                   autoplay
                   controls
-                  onReady={(playbackInfo) => console.log('[Vimeo/1] READY:', playbackInfo)}
-                  onStateChange={(status, playbackInfo) => console.log('[Vimeo/1] STATE CHANGED:', status, playbackInfo)}
+                  onReady={player => console.log('[Vimeo/1] READY:', player)}
+                  onStateChange={(status, player) => console.log('[Vimeo/1] STATE CHANGED:', status, player)}
                   onFinish={() => console.log('[Vimeo/1] FINISHED')}
                   onError={err => console.log('[Vimeo/1] ERRORED', err)}
                 />
               </td>
               <td>
                 <Vimeo
-                  videoId="191947042"
-                  onReady={(playbackInfo) => console.log('[Vimeo/2] READY:', playbackInfo)}
-                  onStateChange={(status, playbackInfo) => console.log('[Vimeo/2] STATE CHANGED:', status, playbackInfo)}
+                  videoId="99426212"
+                  autoplay
+                  onReady={player => console.log('[Vimeo/2] READY:', player)}
+                  onStateChange={(status, player) => console.log('[Vimeo/2] STATE CHANGED:', status, player)}
                   onFinish={() => console.log('[Vimeo/2] FINISHED')}
                   onError={err => console.log('[Vimeo/2] ERRORED', err)}
                 />
@@ -101,8 +104,10 @@ export default function App () {
       </header>
 
       <footer>
-        Copyright 2020. mornya. All rights reserved.
+        Copyright {new Date().getFullYear()}. mornya. All rights reserved.
       </footer>
     </div>
   );
 }
+
+export default App;

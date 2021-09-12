@@ -33,14 +33,14 @@ $ npm run build
 ## Lints your codes
 ```bash
 $ npm run [lint|lint:fix|lint:coverage]
-$ lintest lint [fix]
+$ lintest lint [--fix]
 ```
 
 ## Runs your testcases
 ```bash
 $ npm run [test|test:watch|test:coverage]
-$ lintest test [watch][coverage]
+$ lintest test [--watch][--coverage]
 ```
 
 ## License
-해당 프로젝트의 [LICENSE](LICENSE) 파일 참조.
+프로젝트 라이센스는 [LICENSE](LICENSE) 파일 참조.
