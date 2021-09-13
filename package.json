@@ -19,7 +19,7 @@
   "private": true,
   "repository": "https://github.com/mornya/react-demo-video-player",
   "bugs": "https://github.com/mornya/react-demo-video-player/issues",
-  "types": "./types/index.d.ts",
+  "types": "./types",
   "scripts": {
     "postinstall": "lintest install || exit 0",
     "postuninstall": "lintest install || exit 0",
